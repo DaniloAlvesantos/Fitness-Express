@@ -12,7 +12,7 @@ import Link from "next/link";
 const CardComponent: React.FC = () => {
     return (
         <ContainerReceitaBanner>
-            <Link href="/cards_receitas">
+            <Link href="/cards_receitas" passHref>
                 <ContainerCard title="Ver mais">
                     <Card>
                         <ImageCard>

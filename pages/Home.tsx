@@ -10,10 +10,13 @@ import {
     ContianerIMC,
     Container,
     ParagrafoReceita,
+    ContainerExe
 } from "./components/componentes";
 import CardComponent from "./components/card";
 import Slider from "./components/slider/slider";
 import Head from "next/head";
+import Footer from './components/Footer/index';
+import Exercicios from "./components/exer";
 
 const Home: React.FC = () => {
     return (
@@ -55,6 +58,10 @@ const Home: React.FC = () => {
                     </Link>
                 </ContianerIMC>
             </Container>
+            <ContainerExe>
+                <Exercicios />
+            </ContainerExe>
+            <Footer  />
         </>
     );
 };

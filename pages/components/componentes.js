@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import React from "react";
+
+export default function styles() {
+    return <></>;
+}
 
 export const DARK_MEDIUM = "#111111";
 export const BLACK_OLIVE = "#41463D";
@@ -340,23 +345,6 @@ export const TituloIMCPage = styled.h1`
 
 /* others components */
 
-export const Footer = styled.footer`
-    background: ${GREEN_MEDIUM_CYAN};
-    color: ${LIGHT_RICH};
-
-    font-family: "Inter", sans-serif;
-
-    width: 100%;
-    height: 8%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    bottom: 0;
-`;
-
 export const Card = styled.div`
     width: 100%;
     height: 100%;
@@ -409,7 +397,7 @@ export const List = styled.ul`
 `;
 export const Inp = styled.input`
     border: none;
-    border-bottom: 2px solid #111111;
+    border-bottom: 1px solid #111111;
 
     background: transparent;
 
@@ -419,6 +407,8 @@ export const Inp = styled.input`
     margin: 0.2rem;
 
     width: 11.25rem;
+
+    transition: all ease 2s;
 `;
 export const Span = styled.span`
     color: ${RED};
@@ -789,4 +779,10 @@ export const BoxMinutos = styled.div`
             background-position-x: 100%;
         }
     }
+`;
+
+export const ContainerExe = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

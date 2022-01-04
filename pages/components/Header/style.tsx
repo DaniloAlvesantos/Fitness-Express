@@ -1,5 +1,12 @@
 import styled from "styled-components";
+import React from "react";
 import { GREEN_MEDIUM_CYAN, LIGHT_RICH, LIGHT_GREEN } from "../componentes";
+
+export default function style() {
+    return (
+        <></>
+    )
+}
 
 export const LogoTipo = styled.img`
     width: 3.75rem;

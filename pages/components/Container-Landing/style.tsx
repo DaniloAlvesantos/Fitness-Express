@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import {
     LIGHT_RICH,
@@ -7,7 +8,13 @@ import {
     ELETRIC_BLUE,
 } from "../componentes";
 
-export const ContainerAbout = styled.div`
+export default function style() {
+    return (
+        <></>
+    )
+}
+
+export const  ContainerAbout = styled.div`
     background: linear-gradient(280deg, ${SEA_GREEN}, ${SKY_BLUE});
     color: ${LIGHT_RICH};
     width: 40%;

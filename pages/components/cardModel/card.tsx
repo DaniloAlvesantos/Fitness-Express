@@ -27,7 +27,6 @@ const Cards = () => {
         api.get("cards").then(({ data }) => {
             setCard(data);
         });
-        console.log(card);
         // eslint-disabled-next-line react-hooks/exhaustive-deps
     }, []);
 

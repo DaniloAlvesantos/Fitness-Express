@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import React from "react";
+
+export default function style() {
+    return (
+        <></>
+    )
+}
 
 export const ContainerFather = styled.div`
     display: flex;
