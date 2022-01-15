@@ -1,32 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import api from "../../api/api";
 import {
+    ContainerCards,
+    Container,
+    ContainerBanner,
     ContainerCard,
     Card,
     ImageCard,
     Legenda,
-    ContainerReceitaBanner,
-    ContaienrReceitasCards,
-    ContainerCards,
-    Image
-} from "../componentes";
-import Link from "next/link";
-import api from "../../api/api";
+    Image,
+} from "./style";
 
 type CardType = {
     id: string;
     img: string;
     nome: string;
-    info: string;
-    m: string;
+    nivel: string;
 };
 
-const Cards = () => {
+const CardsExe = () => {
     const [card, setCard] = useState([]);
 
     useEffect(() => {
-        api.get("cards").then(({ data }) => {
+        api.get("exe").then(({ data }) => {
             setCard(data);
-            console.log(card);
         });
         // eslint-disabled-next-line react-hooks/exhaustive-deps
     }, []);
@@ -35,27 +33,30 @@ const Cards = () => {
         <>
             <ContainerCards>
                 {card?.map((cards: CardType, index) => (
-                    <ContaienrReceitasCards key={index} id={cards.id}>
-                        <ContainerReceitaBanner>
+                    <Container key={index} id={cards.id}>
+                        <ContainerBanner>
                             <ContainerCard>
-                                <Link href={`/receitas/${cards.id}`} passHref>
+                                <Link href={`/exercícios/${cards.id}`} passHref>
                                     <Card>
                                         <ImageCard>
-                                            <Image src={cards.img} alt="Banner Image" />
+                                            <Image
+                                                src={cards.img}
+                                                alt="Banner Image"
+                                            />
                                         </ImageCard>
                                         <Legenda>
                                             <p>{cards.nome}</p>
-                                            <p>Dificuldade: {cards.info}</p>
+                                            <p>Dificuldade: {cards.nivel}</p>
                                         </Legenda>
                                     </Card>
                                 </Link>
                             </ContainerCard>
-                        </ContainerReceitaBanner>
-                    </ContaienrReceitasCards>
+                        </ContainerBanner>
+                    </Container>
                 ))}
             </ContainerCards>
         </>
     );
 };
 
-export default Cards;
+export default CardsExe;

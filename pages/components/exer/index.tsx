@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { TextPrimary, Container, TextSec, Button } from './style';
 
 export default function Exercicios() {
@@ -7,7 +8,9 @@ export default function Exercicios() {
             <Container>
                 <TextPrimary>Você está precisando perder uns quilos a mais ?</TextPrimary>
                 <TextSec>Então veja alguns de nossos exercícios !</TextSec>
-                <Button>Ver Mais</Button>
+                <Link href="/exercicios">
+                    <Button>Ver Mais</Button>
+                </Link>
             </Container>
         </>
     );
