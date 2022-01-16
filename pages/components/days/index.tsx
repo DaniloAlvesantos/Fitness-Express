@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container, TextPrimary, TextSecondery } from "./style";
 
 const Days: React.FC = () => {
     const [Dia, setDia] = useState();
@@ -46,8 +47,10 @@ const Days: React.FC = () => {
     }
     return (
         <>
-            <p>{Data()}</p>
-            <p>{Frases()} </p>
+            <Container>
+                <TextPrimary>{Data()}</TextPrimary>
+                <TextSecondery>{Frases()} </TextSecondery>
+            </Container>
         </>
     );
 };
