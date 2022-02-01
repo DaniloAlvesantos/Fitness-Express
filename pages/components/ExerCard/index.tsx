@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { TextPrimary, Container, TextSec, Button } from './style';
 
-export default function Exercicios() {
+export default function ExerCard() {
     return(
         <>
             <Container>

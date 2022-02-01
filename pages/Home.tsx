@@ -16,7 +16,7 @@ import CardComponent from "./components/card";
 import Slider from "./components/slider/slider";
 import Head from "next/head";
 import Footer from './components/Footer/index';
-import Exercicios from "./components/exer";
+import ExerCard from "./components/ExerCard";
 
 const Home: React.FC = () => {
     return (
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                 </ContianerIMC>
             </Container>
             <ContainerExe>
-                <Exercicios />
+                <ExerCard />
             </ContainerExe>
             <Footer  />
         </>

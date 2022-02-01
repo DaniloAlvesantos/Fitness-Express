@@ -1,5 +1,5 @@
 import React from "react";
-import Exe from "./components/exercicios";
+import Exe from "./components/PageExer";
 import Head from "next/head";
 import Header from "./components/Header";
 
