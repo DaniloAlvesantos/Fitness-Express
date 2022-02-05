@@ -1,17 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
-import {
-    Main,
-    BannerReceitas,
-    ContainerSection,
-    Section,
-    ContainerIngredients,
-    ContainerBake,
-    TituloReceitas,
-    BoxMinutos,
-    ContainerClock,
-} from "../components/componentes";
+import { MainExer ,ContainerTop, InfoBox, BannerExer, Nivel, ContainerInfo, LegendaExe } from "../components/componentes";
 // Styled-Components não estiliza o OBJ [id].js !
 
 function Receita({ exercicio }) {
@@ -26,30 +16,24 @@ function Receita({ exercicio }) {
                 />
             </Head>
             <Header />
-            <Main>
-                <BannerReceitas>
-                    <img src={exercicio.img} alt="recipe image" />
-                </BannerReceitas>
-                <ContainerIngredients>
-                    <TituloReceitas>{exercicio.nome}</TituloReceitas>
-                    <p>{exercicio.info}</p>
-                </ContainerIngredients>
-            </Main>
-            <ContainerClock>
-                <BoxMinutos>
-                    <img src="/clock-regular.svg" alt="clock image" />
-                    <p>{exercicio.nivel}</p>
-                </BoxMinutos>
-            </ContainerClock>
-            <ContainerSection>
-                <Section>
-                    <h2>MODO DE PREPARO</h2>
-                    <p>{exercicio.modo}</p>
-                    <ContainerBake>
-                        <img src="/bake.png" alt="bake image" />
-                    </ContainerBake>
-                </Section>
-            </ContainerSection>
+            <MainExer>
+                <ContainerTop>
+                    <BannerExer>
+                        <img src={exercicio.img} alt="exercicios" />
+                    </BannerExer>
+                    {/* <LegendaExe>
+                            <p>{exercicio.nome}</p>
+                        </LegendaExe> */}
+                    <InfoBox>
+                        <Nivel>
+                            <p>{ exercicio.nivel }</p>
+                        </Nivel>
+                        <ContainerInfo>
+                            <p>{exercicio.info}</p>
+                        </ContainerInfo>
+                    </InfoBox>
+                </ContainerTop>
+            </MainExer>
         </>
     );
 }

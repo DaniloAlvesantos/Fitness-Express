@@ -241,49 +241,6 @@ export const ContianerIMC = styled(Container)`
         }
     }
 `;
-// export const ContainerSlider = styled.div`
-//     width: 60%;
-
-//     height: 30vw;
-
-//     position: relative;
-
-//     border-radius: 10px;
-
-//     box-shadow: 1px 2px 28px 2px rgb(0 0 0 / 41%);
-
-//     img {
-//         opacity: 0;
-
-//         position: absolute;
-
-//         width: 100%;
-//         height: 100%;
-
-//         object-fit: cover;
-
-//         transition: opacity 800ms;
-
-//         border-radius: 10px;
-//     }
-//     .selected {
-//         opacity: 1;
-//     }
-//     @media (max-width: 630px) {
-//         width: 70%;
-//         height: 35vw;
-//     }
-//     @media (max-width: 700px) {
-//         width: 80%;
-//     }
-//     @media (max-width: 500px) {
-//         width: 85%;
-//         height: 40vw;
-//     }
-//     @media (max-width: 400px) {
-//         width: 95%;
-//     }
-// `;
 export const ContainerIMCPage = styled(Container)`
     box-shadow: 1px 2px 28px 2px rgb(0 0 0 / 41%);
 
@@ -701,12 +658,7 @@ export const InformaçõesReceita = styled.div`
         margin: 0.3rem;
     }
 `;
-// export const Informações = styled.div`
-//     width:50%;
-//     height:50%;
-//     position: relative;
-//     float: left;
-// `;
+
 export const TituloReceitas = styled.h2`
     font-family: "Fira Sans", sans-serif;
     font-size: 1.4rem;
@@ -785,4 +737,98 @@ export const ContainerExe = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+`;
+
+/* exercicios */
+
+export const MainExer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+export const ContainerTop = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+`;
+export const InfoBox = styled.div`
+    display:row;
+    margin:1rem;
+`;
+
+export const BannerExer = styled.div`
+    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 16.5rem;
+    height: 10rem;
+    border-radius: 10px;
+
+    img {
+        object-fit: cover;
+
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+        float: left;
+    }
+    @media (max-width: 600px) {
+        display: none;
+    }
+`;
+
+export const Nivel = styled.div`
+    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8.6rem;
+    height: 3.7rem;
+
+    p {
+        font-family: "Fira Code", sans-serif;
+    }
+`;
+export const ContainerInfo = styled.div`
+    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
+    border-radius: 5px;
+    padding: 1rem;
+
+    max-width: 40%;
+
+    margin: 1rem;
+    p {
+        font-family: "Fira Code", sans-serif;
+        font-size: 1rem;
+    }
+`;
+export const LegendaExe = styled.div`
+    background: #cdf7f6;
+    opacity: 0.7;
+
+    color: #111111;
+
+    font-family: "Fira Sans", sans-serif;
+
+    border-radius: 10px;
+
+    padding: 1rem;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    transition: ease 400ms;
 `;
