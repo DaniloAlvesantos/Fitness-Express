@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, TextPrimary, TextSecondery } from "./style";
 
 const Days: React.FC = () => {
-    const [Dia, setDia] = useState();
     function Data() {
         let date = new Date();
         let day = [
@@ -17,7 +16,6 @@ const Days: React.FC = () => {
         let fullDay = day[date.getDay()];
         // array day no indice "[]", é o que o "date.getDay" me retornar...
         return fullDay;
-        setDia(fullDay);
     }
     function Frases() {
         let date = new Date();

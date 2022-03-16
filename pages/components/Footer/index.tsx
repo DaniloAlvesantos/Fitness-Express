@@ -3,7 +3,7 @@ import { ContainerFooter } from './style';
 
 const Footer:React.FC = () => {
 
-    const [ano, setAno] = useState();
+    const [ano, setAno] = useState<Number>();
 
     function Data() {
         let date = new Date();

@@ -1,7 +1,17 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
-import { MainExer ,ContainerTop, InfoBox, BannerExer, Nivel, ContainerInfo, LegendaExe } from "../components/componentes";
+import {
+    MainExer,
+    ContainerTop,
+    InfoBox,
+    BannerExer,
+    Nivel,
+    ContainerInfo,
+    LegendaExe,
+    ContainerContent,
+    ContentBox,
+} from "../components/componentes";
 // Styled-Components não estiliza o OBJ [id].js !
 
 function Receita({ exercicio }) {
@@ -26,7 +36,7 @@ function Receita({ exercicio }) {
                         </LegendaExe> */}
                     <InfoBox>
                         <Nivel>
-                            <p>{ exercicio.nivel }</p>
+                            <p>{exercicio.nivel}</p>
                         </Nivel>
                         <ContainerInfo>
                             <p>{exercicio.info}</p>
@@ -34,12 +44,18 @@ function Receita({ exercicio }) {
                     </InfoBox>
                 </ContainerTop>
             </MainExer>
+            <ContentBox>
+                <ContainerContent>
+                    <h2>Modo</h2>
+                    <p>{exercicio.modo}</p>
+                </ContainerContent>
+            </ContentBox>
         </>
     );
 }
 
 export async function getStaticProps({ params }) {
-    const exercicio = await fetch(`http://localhost:3001/exe/${params.id}`)
+    const exercicio = await fetch(`https://api-fitness-express.herokuapp.com/exe/${params.id}`)
         .then((data) => {
             if (data.ok) {
                 return data.json();
@@ -56,7 +72,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const exercicios = await fetch(`http://localhost:3001/exe`)
+    const exercicios = await fetch(`https://api-fitness-express.herokuapp.com/exe`)
         .then((re) => {
             if (re.ok) {
                 return re.json();

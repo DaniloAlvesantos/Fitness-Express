@@ -751,12 +751,12 @@ export const MainExer = styled.div`
 export const ContainerTop = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
     width: 95%;
 `;
 export const InfoBox = styled.div`
-    display:row;
-    margin:1rem;
+    display: row;
+    margin: 1rem;
 `;
 
 export const BannerExer = styled.div`
@@ -771,12 +771,11 @@ export const BannerExer = styled.div`
     img {
         object-fit: cover;
 
-        border-radius: 15px;
+        border-radius: 13px;
         width: 100%;
         height: 100%;
 
-        position: relative;
-        float: left;
+
     }
     @media (max-width: 600px) {
         display: none;
@@ -804,7 +803,10 @@ export const ContainerInfo = styled.div`
     border-radius: 5px;
     padding: 1rem;
 
-    max-width: 40%;
+    width:min(700px, calc(38% + 100px));
+
+
+    /* max-width: 40%; */
 
     margin: 1rem;
     p {
@@ -831,4 +833,33 @@ export const LegendaExe = styled.div`
     width: 100%;
 
     transition: ease 400ms;
+`;
+
+export const ContentBox = styled(Container)`
+    flex-direction: column;
+    width: 100%;
+`;
+
+export const ContainerContent = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+
+    margin:1rem;
+
+    padding:1rem;
+
+    border-radius:5px;
+    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
+
+    h2 {
+        font-family: "Fira Code", sans-serif;
+        font-size: 1rem;
+    }
+    p {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+    }
 `;

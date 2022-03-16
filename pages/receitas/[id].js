@@ -55,7 +55,7 @@ function Receita({ receita }) {
 }
 
 export async function getStaticProps({ params }) {
-    const receita = await fetch(`http://localhost:3001/cards/${params.id}`)
+    const receita = await fetch(`https://api-fitness-express.herokuapp.com/cards/${params.id}`)
         .then((data) => {
             if (data.ok) {
                 return data.json();
@@ -72,7 +72,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const receitas = await fetch(`http://localhost:3001/cards`)
+    const receitas = await fetch(`https://api-fitness-express.herokuapp.com/cards`)
         .then((re) => {
             if (re.ok) {
                 return re.json();
