@@ -1,15 +1,14 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     * {
         margin:0;
         padding:0;
         box-sizing: border-box;
     }
     body {
-        background: ${(props) => props.theme.colors.background};
+        background:rgb(241, 240, 238);
         font-size:14px;
-        color:${(props) => props.theme.colors.text};
         font-family: sans-serif;
     }
     html{
@@ -30,3 +29,5 @@ export default createGlobalStyle`
     }
 
 `;
+
+export default GlobalStyle;

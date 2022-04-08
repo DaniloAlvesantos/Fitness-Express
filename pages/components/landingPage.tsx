@@ -2,24 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Containers from "./Container-Landing/index";
+import Footer from "./Footer";
 import styled from "styled-components";
-
-const Footer = styled.footer`
-    background: #2ebfa5;
-    color: #f8ffe5;
-
-    font-family: "Inter", sans-serif;
-
-    width: 100%;
-    height: 8%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    bottom: 0;
-`;
 
 export default function LandingPage() {
     return (
@@ -33,9 +17,7 @@ export default function LandingPage() {
             </Head>
             <Header />
             <Containers />
-            <Footer>
-                <p>&copy;Dalves-Fitness-express-2022</p>
-            </Footer>
+            <Footer />
         </>
     );
 }

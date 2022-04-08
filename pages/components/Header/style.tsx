@@ -1,11 +1,38 @@
 import styled from "styled-components";
 import React from "react";
+import style from "../../../styles/animations.module.css";
+import Link from "next/link";
 import { GREEN_MEDIUM_CYAN, LIGHT_RICH, LIGHT_GREEN } from "../componentes";
 
-export default function style() {
+type Prop = {
+    error:string,
+}
+
+export default function Style() {
     return (
-        <></>
-    )
+        <>
+            <HeaderBox>
+                <ContainerPrimary>
+                    <div>
+                        <LogoTipo src="/arm.png" alt="logo" />
+                    </div>
+                    <TituloPrimary className={`${style["animate-inside"]}`}>
+                        Fitness Express
+                    </TituloPrimary>
+                    <ContainerLinks>
+                        <ButtomSecondary className={`${style["animate-left"]}`}>
+                            <Link href="/Home">HOME</Link>
+                        </ButtomSecondary>
+                        <Buttom className={`${style["animate-left"]}`}>
+                            <Link href="#">
+                                <a>SOBRE</a>
+                            </Link>
+                        </Buttom>
+                    </ContainerLinks>
+                </ContainerPrimary>
+            </HeaderBox>
+        </>
+    );
 }
 
 export const LogoTipo = styled.img`
@@ -56,7 +83,7 @@ export const ContainerPrimary = styled.div`
 `;
 export const ContainerLinks = styled.div`
     width: 100%;
-    display: inline-flex;
+    display:inline-flex;
     align-items: center;
     justify-content: flex-end;
 `;

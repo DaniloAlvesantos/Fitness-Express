@@ -1,10 +1,10 @@
 import React from "react";
-import AppContent from "./components/AppContent";
+import LandingPage from "./components/landingPage";
 
-export default function Home() {
+export default function AppContent() {
   return (
     <>
-        <AppContent />
+        <LandingPage />
     </>
   );
 }

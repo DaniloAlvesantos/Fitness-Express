@@ -23,7 +23,7 @@ const CardsExe = () => {
         api.get("exe").then(({ data }) => {
             setCard(data);
         });
-        // eslint-disabled-next-line react-hooks/exhaustive-deps
+
     }, []);
     return (
         <>

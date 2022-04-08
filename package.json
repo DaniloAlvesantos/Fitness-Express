@@ -10,7 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
+    "babel-preset-next": "^1.4.0",
     "next": "^11.1.0",
     "next-images": "^1.8.1",
     "react": "^17.0.2",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@types/react": "17.0.11",
     "@types/styled-components": "^5.1.10",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "typescript": "4.3.4"
