@@ -34,7 +34,6 @@ export const ContainerIcons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
 `;
 export const Imagem = styled.img`
     width: 2.4rem;
@@ -42,11 +41,11 @@ export const Imagem = styled.img`
 `;
 
 export const ContainerImage = styled.div`
-    border-radius: 50%;
+    border-radius:16px;
     border: 1px solid #111111;
-    padding: 1rem;
+    padding:0.8rem;
     transition: 300ms;
-    margin: 0px 1rem 0px 1rem;
+    margin: 0px 1rem 1rem 1rem;
     box-shadow: 1px 3px 1px 1px rgba(0, 0, 0, 0.41);
     cursor:pointer;
     :hover {

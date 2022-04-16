@@ -90,25 +90,58 @@ const ButtomCommumSecondary = styled.a`
     }
 `;
 
-export const ButtonReceitas = styled(ButtomCommum)`
-    border: 2px solid ${MEDIUM_BLUE};
-    color: ${MEDIUM_BLUE};
+export const ButtomEffectPrimary = styled.a`
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
 
-    background: transparent;
+    border-radius: 5px;
 
-    transition: 700ms;
+    cursor: pointer;
+
+    font-family: "Ubuntu", sans-serif;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    color: #111111;
 
     margin: 1rem;
+    padding: 10px 35px;
 
-    border-radius: 15px;
+    border: 2px solid ${ELETRIC_BLUE};
 
-    :hover {
-        background: ${MEDIUM_BLUE};
+    overflow: hidden;
 
-        color: ${LIGHT_RICH};
+    position: relative;
+
+    min-width:10rem;
+    height: 1rem;
+
+    transition: 3s ease;
+
+    z-index: 10;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        width: 100%;
+        height: 100%;
+
+        background: ${ELETRIC_BLUE};
+
+        z-index: -1;
+        transition: 3s ease;
     }
-`;
-export const ButtomEffectPrimary = styled(ButtomCommumSecondary)`
+    &:hover {
+        transition: 1.5s ease;
+    }
     &:before {
         width: 0;
         height: 100%;
@@ -139,25 +172,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`;
-export const ContainerReceitas = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    font-family: "Fira Sans", sans-serif;
-
-    h2 {
-        color: ${DARK_BLUE};
-        margin: 1rem;
-        text-transform: uppercase;
-    }
-    @media (max-width: 380px) {
-        h2 {
-            font-size: 22px;
-        }
-    }
 `;
 
 export const ContainerCard = styled.div`
@@ -191,56 +205,7 @@ export const ContainerReceitaBanner = styled(Container)`
         font-size: 70.6%;
     }
 `;
-export const ContianerIMC = styled(Container)`
-    background: #f7f7ff;
 
-    border-radius: 10px;
-
-    width: 50%;
-
-    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
-
-    flex-direction: column;
-
-    margin: 2rem;
-
-    strong {
-        color: ${LIGHT_BLUE};
-    }
-
-    p {
-        color: ${GREEN_MEDIUM_CYAN};
-        font-family: "Ubuntu", sans-serif;
-        margin: 0.5rem;
-        text-align: center;
-    }
-    @media (max-width: 810px) {
-        width: 60%;
-    }
-    @media (max-width: 620px) {
-        width: 70%;
-        font-size: 15px;
-    }
-    @media (max-width: 530px) {
-        width: 75%;
-    }
-    @media (max-width: 425px) {
-        width: 80%;
-        font-size: 14px;
-    }
-    @media (max-width: 370px) {
-        width: 85%;
-        p {
-            font-size: 13px;
-        }
-    }
-    @media (max-width: 300px) {
-        width: 90%;
-        p {
-            font-size: 12px;
-        }
-    }
-`;
 export const ContainerIMCPage = styled(Container)`
     box-shadow: 1px 2px 28px 2px rgb(0 0 0 / 41%);
 
@@ -415,24 +380,6 @@ export const TR = styled.tr`
 `;
 export const TD = styled.td`
     text-transform: uppercase;
-`;
-export const ParagrafoReceita = styled.p`
-    color: ${MEDIUM_BLUE};
-    margin: 5px;
-
-    text-align: center;
-
-    width: 90%;
-
-    font-size: 16px;
-    font-family: "Fira Sans", sans-serif;
-
-    @media (max-width: 535px) {
-        font-size: 15px;
-    }
-    @media (max-width: 400px) {
-        font-size: 14px;
-    }
 `;
 export const LinkReceitas = styled.a`
     font-style: none;
@@ -733,12 +680,6 @@ export const BoxMinutos = styled.div`
     }
 `;
 
-export const ContainerExe = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 /* exercicios */
 
 export const MainExer = styled.div`
@@ -774,8 +715,6 @@ export const BannerExer = styled.div`
         border-radius: 13px;
         width: 100%;
         height: 100%;
-
-
     }
     @media (max-width: 600px) {
         display: none;
@@ -803,8 +742,7 @@ export const ContainerInfo = styled.div`
     border-radius: 5px;
     padding: 1rem;
 
-    width:min(700px, calc(38% + 100px));
-
+    width: min(700px, calc(38% + 100px));
 
     /* max-width: 40%; */
 
@@ -847,11 +785,11 @@ export const ContainerContent = styled.div`
     flex-direction: column;
     width: 95%;
 
-    margin:1rem;
+    margin: 1rem;
 
-    padding:1rem;
+    padding: 1rem;
 
-    border-radius:5px;
+    border-radius: 5px;
     box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.41);
 
     h2 {

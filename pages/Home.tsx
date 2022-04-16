@@ -1,22 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Link from "next/link";
 import Header from "./components/Header";
-import {
-    ButtonReceitas,
-    ContainerReceitas,
-    ButtomEffectPrimary,
-    Title,
-    ContianerIMC,
-    Container,
-    ParagrafoReceita,
-    ContainerExe
-} from "./components/componentes";
-import CardComponent from "./components/card";
 import Slider from "./components/slider/slider";
 import Head from "next/head";
-import Footer from './components/Footer/index';
-import ExerCard from "./components/ExerCard";
+import Footer from "./components/Footer/index";
+import HomeComponents from "./components/home";
 
 const Home: React.FC = () => {
     return (
@@ -30,38 +18,8 @@ const Home: React.FC = () => {
             </Head>
             <Header />
             <Slider />
-            <ContainerReceitas>
-                <h2>Conheça mais Receitas</h2>
-                <ParagrafoReceita>
-                    Conheça receitas Fitines, faceis, do jeito que você preferir
-                </ParagrafoReceita>
-                <ParagrafoReceita>
-                    Aprenda a fazer receitas sem caloria, sem carbo, Bolos,
-                    doces, snack...
-                </ParagrafoReceita>
-                <CardComponent />
-                <ButtonReceitas>
-                    <Link href="/cards_receitas" passHref>
-                        Ver Mais
-                    </Link>
-                </ButtonReceitas>
-            </ContainerReceitas>
-            <Container>
-                <ContianerIMC>
-                    <Title>calcule seu imc</Title>
-                    <p>
-                        Calcule seu <strong>IMC</strong> e veja se você está
-                        saúdavel, caso não, iremos mostrar soluções para você
-                    </p>
-                    <Link href="/imc" passHref>
-                        <ButtomEffectPrimary>calcular</ButtomEffectPrimary>
-                    </Link>
-                </ContianerIMC>
-            </Container>
-            <ContainerExe>
-                <ExerCard />
-            </ContainerExe>
-            <Footer  />
+            <HomeComponents />
+            <Footer />
         </>
     );
 };

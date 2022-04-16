@@ -16,14 +16,14 @@ export default function Style() {
                     <div>
                         <LogoTipo src="/arm.png" alt="logo" />
                     </div>
-                    <TituloPrimary className={`${style["animate-inside"]}`}>
+                    <TituloPrimary >
                         Fitness Express
                     </TituloPrimary>
                     <ContainerLinks>
-                        <ButtomSecondary className={`${style["animate-left"]}`}>
+                        <ButtomSecondary >
                             <Link href="/Home">HOME</Link>
                         </ButtomSecondary>
-                        <Buttom className={`${style["animate-left"]}`}>
+                        <Buttom >
                             <Link href="#">
                                 <a>SOBRE</a>
                             </Link>

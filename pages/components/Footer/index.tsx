@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import {
     ContainerNavigation,
     ContainerIcons,
@@ -10,14 +10,6 @@ import {
 } from "./style";
 
 const Footer: React.FC = () => {
-    const [ano, setAno] = useState<Number>();
-
-    function Data() {
-        let date = new Date();
-        let year = date.getFullYear();
-        setAno(year);
-    }
-
     return (
         <>
         <ContainerFooter>

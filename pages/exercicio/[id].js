@@ -55,7 +55,7 @@ function Receita({ exercicio }) {
 }
 
 export async function getStaticProps({ params }) {
-    const exercicio = await fetch(`https://api-fitness-express.herokuapp.com/exe/${params.id}`)
+    const exercicio = await fetch(`https://api-fake-fitness-express.herokuapp.com/exe/${params.id}`)
         .then((data) => {
             if (data.ok) {
                 return data.json();
@@ -72,7 +72,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const exercicios = await fetch(`https://api-fitness-express.herokuapp.com/exe`)
+    const exercicios = await fetch(`https://api-fake-fitness-express.herokuapp.com/exe`)
         .then((re) => {
             if (re.ok) {
                 return re.json();
