@@ -5,7 +5,8 @@ import {
     Container,
     ContainerAbout,
     Headline,
-    ContainerTxt
+    ContainerTxt,
+    Main
 } from "./style";
 
 const Containers: React.FC = () => {
@@ -43,17 +44,19 @@ const Containers: React.FC = () => {
                     </CardBox>
                 </Container>
             </PrimaryBox>
-            <ContainerAbout>
-                <Headline>
-                    <h2>Venha conhecer mais de nós !!</h2>
-                </Headline>
-                <ContainerTxt>
-                    <p>Nós iremos te auxiliar com exercícios e cardapios variados, para ajudar na sua estética e saúde</p>
-                    <p>Este site não foi feito para ganhar dinheiro, mas sim para sua saúde</p>
-                    <p>Ainda estamos em desenvolvimento... mas você ainda pode se surpreender com nossos conteúdo !</p>
-                    <p>Ainda não somos uma empresa, infelizmente 😥</p>
-                </ContainerTxt>
-            </ContainerAbout>
+            <Main>
+                <ContainerAbout>
+                    <Headline>
+                        <h2>Venha conhecer mais de nós !!</h2>
+                    </Headline>
+                    <ContainerTxt>
+                        <p>Nós iremos te auxiliar com exercícios e cardapios variados, para ajudar na sua estética e saúde</p>
+                        <p>Este site não foi feito para ganhar dinheiro, mas sim para sua saúde</p>
+                        <p>Ainda estamos em desenvolvimento... mas você ainda pode se surpreender com nossos conteúdo !</p>
+                        <p>Ainda não somos uma empresa, infelizmente 😥</p>
+                    </ContainerTxt>
+                </ContainerAbout>
+            </Main>
         </>
     );
 };

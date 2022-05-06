@@ -10,11 +10,13 @@ export default function style() {
 // export const BLACK_FOGRA = "#0e131f";
 // export const LIGHT_BLUE = "#7899d4";
 // export const MEDIUM_BLUE = "#3083dc";
+// export const MEDIUM_BLUE = "#3c9aff";
 // export const DARK_BLUE = "#0a369d";
 // export const LIGHT_CYAN = "#cdf7f6";
 // export const LIGHT_RICH = "#f8ffe5";
 // export const LIGHT_RICH_SECONDARY = "#f4f7f6";
 // export const LIGHT_GREEN = "#7dde92";
+// export const GREEN_MEDIUM_CYAN = "#2ebfa4c7";
 // export const GREEN_MEDIUM_CYAN = "#2ebfa5";
 // export const SEA_GREEN = "#1affd5";
 // export const ELETRIC_BLUE = "#8eedf7";

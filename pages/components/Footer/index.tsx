@@ -1,45 +1,34 @@
 import Link from "next/link";
 import React from "react";
-import {
-    ContainerNavigation,
-    ContainerIcons,
-    Imagem,
-    ContainerImage,
-    ContainerFooter,
-    HR
-} from "./style";
+import { ContainerFooter, List, NavList, BoxMenu, H2, Box, ButtonToTop, Logo, BoxContent } from "./style";
 
 const Footer: React.FC = () => {
     return (
         <>
-        <ContainerFooter>
-        <HR/>
-                <ContainerNavigation>
-                    <Link href={"/Home"}>
-                        <p>Home</p>
-                    </Link>
-                    <Link href={"/cards_receitas"}>
-                        <p>Receitas</p>
-                    </Link>
-                    <Link href={"/imc"}>
-                        <p>IMC</p>
-                    </Link>
-                    <Link href={"/exercicios"}>
-                        <p>Exercícios</p>
-                    </Link>
-                </ContainerNavigation>
-                <ContainerIcons>
-                    <ContainerImage>
-                        <Imagem  title="Linkedin" src="/linkedin.svg" />
-                    </ContainerImage>
-                    <ContainerImage>
-                        <Imagem  title="Portifolio" src="/suitcase.svg" />
-                    </ContainerImage>
-                    <ContainerImage>
-                        <Imagem  title="Youtube" src="/youtube.svg" />
-                    </ContainerImage>
-                </ContainerIcons>
-        </ContainerFooter>
+            <ContainerFooter>
+                <BoxMenu>
+                    <List>
+                        <H2 primary="150%">MENU</H2>
+                        <NavList><a>HOME</a></NavList>
+                        <NavList><a>IMC</a></NavList>
+                        <NavList><a>Receitas</a></NavList>
+                        <NavList><a>Exercícios</a></NavList>
+                    </List>
+                    <List>
+                        <H2 primary="245%">CONTATO</H2>
+                        <NavList><a>Gmail</a></NavList>
+                        <NavList><a>Instagram</a></NavList>
+                        <NavList><br/></NavList>
+                        <NavList><br/></NavList>
+                    </List>
+                <Box>
+                    <BoxContent>
+                        <ButtonToTop><img src="/arrow.svg" /></ButtonToTop>
+                        <Logo src="/logo.png" />
+                    </BoxContent>
+                </Box>
+                </BoxMenu>
+            </ContainerFooter>
         </>
     );
 };

@@ -81,31 +81,46 @@ export const CardBox = styled.div`
     }
 `
 
+export const Main = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+`
+
 export const ContainerAbout = styled.div`
-    background:#3083dc;
+    background-image: url("/wave-block.svg");
+    background-color:#3C9AFF;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
     display:flex;
     flex-direction:column;
-    width:100%;
+
+    width:95%;
+    height:30% fixed;
+
     padding:1rem;
     padding-bottom:8rem;
+
+    border-radius:5px;
+
+    margin:1rem;
+
     p {
         font-family:"Open Sans", sans-serif;
         text-shadow: 2px 2px 5px rgb(46, 191, 164);
         letter-spacing:2px;
-        font-size:1rem;
+        font-size: clamp(0.95rem, 1rem, 1.5vw);
         margin:5px 0px 5px 0px;
         width:100%;
-
-        @media(max-width:490px) {
-            width:95%;
-            font-size:0.95rem;
-        }
-        @media(max-width:490px) {
-            width:100%;
-        }
     }
     @media(max-width:490px){
         padding-bottom:5rem;
+    }
+    @media(max-width:1024px) {
+        width:auto;
     }
 `
 

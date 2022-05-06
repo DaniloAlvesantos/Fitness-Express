@@ -1,13 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-const GlobalStyle = createGlobalStyle`
     * {
         margin:0;
         padding:0;
         box-sizing: border-box;
     }
     body {
-        background:rgb(241, 240, 238);
+        background:#f1f0ee;
         font-size:14px;
         font-family: sans-serif;
     }
@@ -28,6 +29,6 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
 
-`;
 
-export default GlobalStyle;
+
+
