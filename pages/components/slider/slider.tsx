@@ -1,16 +1,23 @@
 import React from "react";
-import { ContainerFather ,Container_slider, CarroselMain, Image } from "./style";
+import { data } from "./img-data";
 
 const Slider: React.FC = () => {
     return (
         <>
-            <ContainerFather>
-                <Container_slider>
-                    <CarroselMain><Image src="/1.png" alt="image0" /></CarroselMain>
-                    <CarroselMain><Image src="/2.png" alt="image1" /></CarroselMain>
-                    <CarroselMain><Image src="/3.png" alt="image2" /></CarroselMain>
-                </Container_slider>
-            </ContainerFather>
+            <div className="flex items-center justify-center w-full bg-zinc-200">
+                <div
+                    id="slider"
+                    className="w-full h-full overflow-x-scroll whitespace-nowrap  scroll-smooth  scrollbar-thin scrollbar-thumb-zinc-400 "
+                >
+                    {data.map((value) => (
+                        <img
+                            src={value.url}
+                            alt={value.alt}
+                            className="w-[28rem] inline-block m-4 rounded-md shadow-customized"
+                        />
+                    ))}
+                </div>
+            </div>
         </>
     );
 };

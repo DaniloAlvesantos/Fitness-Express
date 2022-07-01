@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
     Section,
@@ -21,7 +22,9 @@ const HomeComponents: React.FC = () => {
                                 <h2>Veja nossas receitas Fit !</h2>
                             </About>
                             <BtnEffect>
-                                Aprenda a Fazer a receita do seu dia a dia
+                                <Link href="/cards_receitas">
+                                        Aprenda a Fazer a receita do seu dia a dia
+                                </Link>
                             </BtnEffect>
                         </CardNavigation>
                         <CardNavigation>
@@ -29,14 +32,14 @@ const HomeComponents: React.FC = () => {
                             <About>
                                 <h2>IMC</h2>
                             </About>
-                            <BtnEffect>Calcule seu IMC !</BtnEffect>
+                            <BtnEffect><Link href="/imc">Calcule seu IMC !</Link></BtnEffect>
                         </CardNavigation>
                         <CardNavigation>
                             <IMG src="exercise.svg" />
                             <About>
                                 <h2>Exercícios</h2>
                             </About>
-                            <BtnEffect>Venha se exercítar !</BtnEffect>
+                            <BtnEffect><Link href="/exercicios">Venha se exercítar !</Link></BtnEffect>
                         </CardNavigation>
                     </Box>
                 </Container>

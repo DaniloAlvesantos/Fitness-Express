@@ -13,12 +13,6 @@ export const ContainerFather = styled.div`
     justify-content: center;
 `;
 export const Container_slider = styled.div`
-    width: 50%;
-    display: flex;
-    overflow-x: auto;
-    margin: 1rem;
-    scroll-behavior: smooth;
-
     ::-webkit-scrollbar {
         width:10px;
     }

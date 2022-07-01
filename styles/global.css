@@ -2,33 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-    * {
-        margin:0;
-        padding:0;
-        box-sizing: border-box;
-    }
-    body {
-        background:#f1f0ee;
-        font-size:14px;
-        font-family: sans-serif;
-    }
-    html{
-      scroll-behavior: smooth;
-    }
-
-    body {
-      width: 100vw;
-      height: 100%;
-    }
-    body::-webkit-scrollbar {
-      display: none;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-
-
