@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     }
     return (
         <>
-            <div className="mt-4 pt-[5rem] h-80 bg-footer bg-center bg-no-repeat bg-cover bg-[#52ffee]">
+            <div className="mt-4 pt-[5rem] h-80 bg-footer dark:bg-footer-dark bg-center bg-no-repeat bg-cover bg-[#52ffee] dark:bg-[#1f1f1f]">
                 <div className="flex items-center justify-evenly w-[60%] mt-[3rem] mobile-sm:w-[80%]">
                     <ul className="flex justify-center flex-col font-['Inter'] w-8">
                         <h2 className="text-[#fafafa] border-b-2 w-[150%] pb-[3px] mb-[5px] font-xs">
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                     </ul>
                     <div className="flex justify-end absolute right-[5px] mb-[-4rem]">
                         <div className="flex items-center justify-center gap-4 group">
-                            <button onClick={scroll} className="bg-[#1affd5]  w-9 h-9 rounded-lg border-none p-[5px] mb-[-5rem] cursor-pointer flex justify-center items-center transition-colors duration-300 hover:bg-cyan-300 mobile-small:mr-10">
+                            <button onClick={scroll} className="bg-[#1affd5] dark:bg-[#121212]  w-9 h-9 rounded-lg border-none p-[5px] mb-[-5rem] cursor-pointer flex justify-center items-center transition-colors duration-300 hover:bg-cyan-300 mobile-small:mr-10">
                                 <img
                                     className="rotate-[-90deg] group-hover:opacity-75"
                                     src="/arrow.svg"

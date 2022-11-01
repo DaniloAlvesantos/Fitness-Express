@@ -7,7 +7,7 @@ const Slider: React.FC = () => {
             <div className="flex items-center justify-center w-full">
                 <div
                     id="slider"
-                    className="w-full h-full snap-x snap-proximity overflow-x-scroll whitespace-nowrap  scroll-smooth  scrollbar-thin scrollbar-thumb-zinc-400 backdrop-blur-sm "
+                    className="w-full h-full snap-x snap-proximity overflow-x-scroll whitespace-nowrap  scroll-smooth  scrollbar-thin scrollbar-thumb-zinc-400 backdrop-blur-sm bg-gradient-to-t from-[#52FFEE] dark:from-[#121212] to-[#00b4a2] dark:to-[#303030] bg-fixed medium:scrollbar-hide"
                 >
                     {data.map((value) => (
                         <img

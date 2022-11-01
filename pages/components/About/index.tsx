@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import Header from "./Header";
-import Containers from "./Container-Landing/index";
-import Footer from "./Footer";
+import Header from "../Header";
+import Containers from "./Cards";
+import Footer from "../Footer";
 
 
-export default function LandingPage() {
+export default function SobreComponents() {
     return (
         <>
             <Head>

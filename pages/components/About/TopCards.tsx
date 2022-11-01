@@ -1,5 +1,5 @@
 import React from "react";
-import { CardsOBJ } from './index';
+import { CardsOBJ } from './Cards';
 
 const TopCards:React.FC = () => {
     return (

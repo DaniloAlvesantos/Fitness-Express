@@ -1,17 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {
-    Main,
-    BannerReceitas,
-    ContainerSection,
-    Section,
-    ContainerIngredients,
-    TituloReceitas,
-    BoxMinutos,
-    ContainerClock,
-} from "../components/componentes";
 
 function Receita({ receita }) {
     console.log(receita);

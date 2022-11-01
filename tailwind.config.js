@@ -1,6 +1,7 @@
 
 module.exports = {
     mode:'jit',
+    darkMode:'class',
     content: [
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
@@ -9,6 +10,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 "footer": "url('/wave01.svg')",
+                "footer-dark": "url('/wave01-dark.svg')",
                 "wave-block": "url('/wave-block.svg')",
                 "blob-scene": "url('/blob-scene-haikei.svg')"
             },
@@ -17,6 +19,7 @@ module.exports = {
                 "extra-large": { 'max': '1279px' },
                 "large": { 'max': '1023px' },
                 "medium": { 'max': '767px' },
+                "740-screen":{'max':'740px'},
                 "grid-707":{'min':'707px'},
                 "medium-sm": {'max': '600px'},
                 "screen-680": {'max': '680px'},
@@ -24,7 +27,8 @@ module.exports = {
                 "screen-375": {'max': '375px'},
                 "mobile-sm": { 'max': '380px'},
                 "sml":{'min':'520px'},
-                "380-screen":{'min':'380px'}
+                "380-screen":{'min':'380px'},
+                "820-scree":{'min':'820px'}
             },
             borderRadius: {
                 "l-no": '10px 10px 10px 1px',
@@ -47,6 +51,7 @@ module.exports = {
     },
     plugins: [
         //require('tailwind-scrollbar')
+        require('tailwind-scrollbar-hide'),
     ],
     variants: {
         //scrollbar: ['rounded']

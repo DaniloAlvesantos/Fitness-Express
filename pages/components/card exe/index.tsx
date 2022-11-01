@@ -37,7 +37,7 @@ const CardsExe = () => {
                                         <div className="w-full h-full border-2 border-solid border-[#7dde92] rounded-lg cursor-pointer transition duration-500 relative overflow-hidden">
                                             <div className="w-full h-full absolute float-left hover:scale-125  ease-in-out transition">
                                                 <img
-                                                    className="w-full h-full object-cover rounded-lg"
+                                                    className="w-full h-full object-cover rounded-md"
                                                     src={cards.img}
                                                     alt="Banner Image"
                                                 />

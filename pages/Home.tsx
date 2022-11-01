@@ -4,11 +4,11 @@ import Header from "./components/Header";
 import Slider from "./components/slider/slider";
 import Head from "next/head";
 import Footer from "./components/Footer/index";
-import HomeComponents from "./components/home";
+import HomeComponents from "./components/homeCards";
 
 const Home: React.FC = () => {
     return (
-        <>
+        <div className="bg-[#f4f4f4] dark:bg-[#1f1f1f]">
             <Head>
                 <title>Home |fitnessExpress</title>
                 <meta
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
             <Slider />
             <HomeComponents />
             <Footer />
-        </>
+        </div>
     );
 };
 
