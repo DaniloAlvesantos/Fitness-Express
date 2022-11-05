@@ -30,7 +30,7 @@ const Cards = () => {
                         <div className="flex-col text-base">
                             <div className="w-[20em] h-[20em] m-2">
                                 <Link href={`/receitas/${cards.id}`} passHref>
-                                    <div className="w-full h-full border-2 border-solid border-[#7dde92] rounded-lg cursor-pointer transition duration-500 relative overflow-hidden">
+                                    <div className="w-full h-full border-2 border-solid border-[#7dde92] dark:border-[#121212] rounded-lg cursor-pointer transition duration-500 relative overflow-hidden">
                                         <div className="w-full h-full absolute float-left hover:scale-125  ease-in-out transition">
                                             <img
                                                 className="w-full h-full object-cover rounded-lg"
@@ -38,7 +38,7 @@ const Cards = () => {
                                                 alt="Banner Image"
                                             />
                                         </div>
-                                        <div className="bg-green-200 opacity-70 text-[#111111] font-sans rounded-lg p-4 absolute left-0 bottom-0 w-full transition ease-linear duration-300">
+                                        <div className="bg-green-200 dark:bg-[#111111] opacity-70 text-[#111111] dark:text-[#fefdff] font-sans rounded-lg p-4 absolute left-0 bottom-0 w-full transition ease-linear duration-300">
                                             <p>{cards.nome}</p>
                                             <p>Dificuldade: {cards.info}</p>
                                         </div>

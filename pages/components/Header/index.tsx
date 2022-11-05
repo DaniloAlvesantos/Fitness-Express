@@ -10,6 +10,7 @@ export default function Header() {
         setTheme(!theme);
         if (!theme === true) {document.documentElement.classList.add("dark");}
         else document.documentElement.classList.remove("dark");
+        event?.preventDefault();
     }
 
     function loadTheme() {
@@ -21,7 +22,7 @@ export default function Header() {
         <>
             <header className="bg-[#2ebfa5] dark:bg-[#303030] text-[#f8ffe5] w-full h-16 flex">
                 <div className="w-full inline-flex items-center">
-                    <div>
+                    <div className="hidden 450-screen:block">
                         <img
                             className="w-[3.75rem] h-[3.75rem] m-1 justify-start object-cover mobile-sm:w-[3rem] mobile-sm:h-[3rem]"
                             src="/arm.png"

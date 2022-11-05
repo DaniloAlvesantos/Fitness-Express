@@ -2,11 +2,11 @@ import * as React from "react";
 import Header from "./components/Header";
 import Cards from "./components/cardModel/card";
 import Head from "next/head";
-import Filter from "./components/receitas assets/filter";
+import Filter from "./components/filter/filter";
 
 const Receitas: React.FC = () => {
     return (
-        <>
+        <div className="dark:bg-[#1f1f1f]">
             <Head>
                 <title>Cards |fitnessExpress</title>
                 <meta
@@ -17,7 +17,7 @@ const Receitas: React.FC = () => {
             <Header />
             <Filter />
             <Cards />
-        </>
+        </div>
     );
 };
 

@@ -12,7 +12,7 @@ const Filter: React.FC = () => {
                 </h2>
             </div>
             <ul
-                className="flex items-start justify-center flex-col m-4 border-solid border-2 border-black rounded-md p-4 w-[15rem]"
+                className="flex items-start justify-center flex-col m-4 border-solid border-2 border-black dark:border-[#fefdff] dark:text-[#fefdff] rounded-md p-4 w-[15rem]"
             >
                 <h2>Filtrar</h2>
                 <label>Dificuldade</label>
@@ -20,6 +20,7 @@ const Filter: React.FC = () => {
                     <input
                         type="checkbox"
                         id="facil"
+                        className="m-2"
                         onChange={() => setFacil(!facil)}
                     />
                     Fácil
@@ -28,6 +29,7 @@ const Filter: React.FC = () => {
                     <input
                         type="checkbox"
                         id="medio"
+                        className="m-2"
                         onChange={() => setMedio(!medio)}
                     />
                     Médio
@@ -36,6 +38,7 @@ const Filter: React.FC = () => {
                     <input
                         type="checkbox"
                         id="dificil"
+                        className="m-2"
                         onChange={() => setDificil(!dificil)}
                     />
                     Difícil

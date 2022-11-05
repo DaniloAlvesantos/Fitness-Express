@@ -24,6 +24,7 @@ module.exports = {
                 "medium-sm": {'max': '600px'},
                 "screen-680": {'max': '680px'},
                 "mobile-small": {'max': '500px'},
+                "450-screen":{'min':'450px'},
                 "screen-375": {'max': '375px'},
                 "mobile-sm": { 'max': '380px'},
                 "sml":{'min':'520px'},

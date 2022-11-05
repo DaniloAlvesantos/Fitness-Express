@@ -2,17 +2,19 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
+import Alert from "./alert";
 import Card from "./CardComponent/index";
 
 const LandingPage: React.FC = () => {
-    const [dark,setDark] = useState(false);
+    const [dark, setDark] = useState(false);
     function handleTheme() {
-        if(document.documentElement.classList.value === "dark") setDark(true)
-        else setDark(false); 
+        if (document.documentElement.classList.value === "dark") setDark(true);
+        else setDark(false);
     }
     return (
         <>
             <Header />
+            <Alert />
             <div className="bg-[url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] bg-no-repeat bg-cover bg-center bg-fixed 820-screen:bg-fixed w-full h-[60vh] relative flex items-center, justify-left">
                 <div className="bg-gradient-to-r from-[#111111] to-transparent absolute w-full h-full"></div>
                 <div className="flex items-center justify-start">
@@ -21,7 +23,7 @@ const LandingPage: React.FC = () => {
                         alt="blob-cian"
                         className="sml:w-72  380-screen:w-56 w-36 h-36 380-screen:h-56 sml:h-72 z-10 opacity-90"
                     /> */}
-                    <div className="sml:w-72  380-screen:w-56 w-36 h-36 380-screen:h-56 sml:h-72 z-10 opacity-90"> 
+                    <div className="sml:w-72  380-screen:w-56 w-36 h-36 380-screen:h-56 sml:h-72 z-10 opacity-90">
                         <svg
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
