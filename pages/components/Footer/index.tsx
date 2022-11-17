@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                             </Link>
                         </li>
                         <li className="list-none text-[#fafafa] uppercase">
-                            <Link href="/cards_receitas">
+                            <Link href="/receitas">
                                 <a className="cursor-pointer hover:text-[#cdcdcdcd] transition-colors">
                                     Receitas
                                 </a>

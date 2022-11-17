@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import IMCFunc from "./components/imc/imc";
 import Head from "next/head";
 
 const IMC: React.FC = () => {
     return (
-        <>
+        <div className="dark:bg-[#1f1f1f]">
             <Head>
                 <title>IMC |fitnessExpress</title>
                 <meta
@@ -15,7 +15,7 @@ const IMC: React.FC = () => {
             </Head>
             <Header />
             <IMCFunc />
-        </>
+        </div>
     );
 };
 

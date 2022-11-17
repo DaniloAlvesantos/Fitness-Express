@@ -17,8 +17,8 @@ const CardsExe = () => {
         });
     }, []);
     return (
-        <>
-            <div className="grid justify-center items-center gap-8 grid-cols-300-0fr p-1">
+        <div className="dark:bg-[#1f1f1f]">
+            <div className="grid justify-center items-center gap-8 grid-cols-300-0fr p-1 dark:bg-[#1f1f1f]">
                 {load ? (
                     <p>Carregando...</p>
                 ) : (
@@ -29,9 +29,10 @@ const CardsExe = () => {
                             id={cards.id}
                         >
                             <div className="flex-col text-base">
-                                <div className="w-[20em] h-[20em] m-2">
+                                <div className="w-[20em] h-[20em] m-2" onClick={() => alert("Exercícios não está disponivel nessa versão !")}>
                                     <Link
-                                        href={`/exercicio/${cards.id}`}
+                                        //href={`/exercicio/${cards.id}`}
+                                        href={`#`}
                                         passHref
                                     >
                                         <div className="w-full h-full border-2 border-solid border-[#7dde92] dark:border-[#121212] rounded-lg cursor-pointer transition duration-500 relative overflow-hidden">
@@ -56,7 +57,7 @@ const CardsExe = () => {
                     ))
                 )}
             </div>
-        </>
+        </div>
     );
 };
 export default CardsExe;

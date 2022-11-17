@@ -14,8 +14,8 @@ export default function Header() {
     }
 
     function loadTheme() {
-        if(document.documentElement.classList.value === "dark") setTheme(true);
-        else setTheme(false);
+        if(document.documentElement.classList.value === "dark") return setTheme(true);
+        setTheme(false);
     }
 
     return (

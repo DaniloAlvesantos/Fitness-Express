@@ -9,7 +9,7 @@ const cards = {
             souce: "/Google/menu_book_.svg",
             alt: "halter",
         },
-        href: "cards_receitas",
+        href: "receitas",
     },
     IMC: {
         title: "IMC",

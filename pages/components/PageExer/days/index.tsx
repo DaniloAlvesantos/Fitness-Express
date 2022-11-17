@@ -44,9 +44,9 @@ const Days: React.FC = () => {
     }
     return (
         <>
-            <div className="flex items-center justify-center flex-col w-[min(700px,calc(38% + 100px))] shadow-2xl bg-[#f9fdff] rounded-lg p-8 m-3 mb-6">
-                <h2 className="font-Inter text-lg text-[#3083dc] uppercase">{Data()}</h2>
-                <h3 className="font-sans text-base text-[#111111]">{Frases()} </h3>
+            <div className="flex items-center justify-center flex-col w-[min(700px,calc(38% + 100px))] shadow-2xl bg-[#f9fdff] dark:bg-[#303030] rounded-lg p-8 m-3 mb-6">
+                <h2 className="font-Inter text-lg text-[#3083dc] dark:drop-shadow-xl dark:shadow-[#fefdff] uppercase">{Data()}</h2>
+                <h3 className="font-sans text-base text-[#111111] dark:text-[#fefdff]">{Frases()} </h3>
             </div>
         </>
     );
