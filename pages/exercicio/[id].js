@@ -1,17 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
-import {
-    MainExer,
-    ContainerTop,
-    InfoBox,
-    BannerExer,
-    Nivel,
-    ContainerInfo,
-    LegendaExe,
-    ContainerContent,
-    ContentBox,
-} from "../components/componentes";
+
 // Styled-Components não estiliza o OBJ [id].js !
 
 function Receita({ exercicio }) {
@@ -26,14 +16,14 @@ function Receita({ exercicio }) {
                 />
             </Head>
             <Header />
-            <MainExer>
+            {/* <MainExer>
                 <ContainerTop>
                     <BannerExer>
                         <img src={exercicio.img} alt="exercicios" />
                     </BannerExer>
-                    {/* <LegendaExe>
+                    <LegendaExe>
                             <p>{exercicio.nome}</p>
-                        </LegendaExe> */}
+                        </LegendaExe>
                     <InfoBox>
                         <Nivel>
                             <p>{exercicio.nivel}</p>
@@ -49,7 +39,7 @@ function Receita({ exercicio }) {
                     <h2>Modo</h2>
                     <p>{exercicio.modo}</p>
                 </ContainerContent>
-            </ContentBox>
+            </ContentBox> */}
         </>
     );
 }
