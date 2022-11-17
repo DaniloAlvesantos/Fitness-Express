@@ -1,5 +1,5 @@
 import React from "react";
-() => null;''
+export default () => null;
 /*import React from "react";
 
 const TabelaIMC: React.FC = () => {
