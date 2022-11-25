@@ -1,5 +1,5 @@
 import React from "react";
-import CardsExe from "../card exe";
+import CardsExe from "../cardsExercises";
 import Days from "./days/index";
 
 const Exe: React.FC = () => {

@@ -1,10 +1,38 @@
 import * as React from "react";
+import { useState } from "react";
 import Header from "./components/Header";
-import Cards from "./components/cardModel/card";
+import Cards from "./components/cardsRecipes/card";
 import Head from "next/head";
-import Filter from "./components/filter/filter";
 
 const Receitas: React.FC = () => {
+    const [filterElement, setFilterElement] = useState<string>();
+
+    function handleInput(event: {
+        target: { value: React.SetStateAction<string | undefined> };
+    }) {
+        setFilterElement(event?.target.value);
+    }
+
+    function filterCards() {
+        const cards = document.querySelectorAll(".cards");
+            if (filterElement != "") {
+                for (let card of cards) {
+                    let title = card.querySelector(".name");
+                    title = title.textContent.toLowerCase();
+                    let filterText = filterElement;
+                    console.log(filterText);
+                    if (!title.includes(filterText)) {
+                        card.style.display = "none";
+                    } else {
+                        card.style.display = "block";
+                    }
+                }
+            } else {
+                for (let card of cards) {
+                    card.style.display = "block";
+                }
+            }
+    }
     return (
         <div className="dark:bg-[#1f1f1f]">
             <Head>
@@ -15,7 +43,28 @@ const Receitas: React.FC = () => {
                 />
             </Head>
             <Header />
-            <Filter />
+            <main className="flex-col justify-center items-center">
+                <div className="m-4 flex items-center justify-center bg-gradient-to-r from-[#6ef195] to-[#00e3fd] rounded-sm">
+                    <h2 className="m-2 font-medium font-mono text-lg">
+                        Catálago de receitas
+                    </h2>
+                </div>
+                <div className="w-8/12 flex justify-end items-center relative">
+                    <input
+                        id="pesquisar"
+                        className="w-7/12 px-3  py-2 border border-slate-600 rounded-xl focus:outline-0"
+                        type="text"
+                        placeholder="Pesquise por receita"
+                        onKeyDown={filterCards}
+                        onChange={handleInput}
+                    />
+                    <img
+                        src="/Google/search_.svg"
+                        className="absolute mr-2 w-10"
+                        alt="Search Icon"
+                    />
+                </div>
+            </main>
             <Cards />
         </div>
     );

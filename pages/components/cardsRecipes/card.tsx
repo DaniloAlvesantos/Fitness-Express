@@ -23,7 +23,7 @@ const Cards = () => {
             <div className="grid justify-center items-center gap-8 grid-cols-300-0fr p-1">
                 {card?.map((cards: CardType, index) => (
                     <div
-                        className="flex justify-center items-center"
+                        className="flex justify-center items-center cards"
                         key={index}
                         id={cards.id}
                     >
@@ -39,7 +39,7 @@ const Cards = () => {
                                             />
                                         </div>
                                         <div className="bg-green-200 dark:bg-[#111111] opacity-70 text-[#111111] dark:text-[#fefdff] font-sans rounded-lg p-4 absolute left-0 bottom-0 w-full transition ease-linear duration-300">
-                                            <p>{cards.nome}</p>
+                                            <p className="name">{cards.nome}</p>
                                             <p>Dificuldade: {cards.info}</p>
                                         </div>
                                     </div>
