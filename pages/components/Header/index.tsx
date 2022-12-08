@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -6,9 +7,9 @@ export default function Header() {
     const [infoHover, setInfo] = useState(false);
     const [theme, setTheme] = useState(false);
 
-    function handleTheme() {
+    function handleTheme(event: { preventDefault: () => void; }) {
         setTheme(!theme);
-        if (!theme === true) {document.documentElement.classList.add("dark");}
+        if (!theme === true) document.documentElement.classList.add("dark");
         else document.documentElement.classList.remove("dark");
         event?.preventDefault();
     }
@@ -20,7 +21,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="bg-[#2ebfa5] dark:bg-[#303030] text-[#f8ffe5] w-full h-16 flex">
+            <header className="bg-[#2ebfa5] dark:bg-[#303030] text-[#f6f6f6] w-full h-16 flex">
                 <div className="w-full inline-flex items-center">
                     <div className="hidden 450-screen:block">
                         <img
@@ -46,7 +47,7 @@ export default function Header() {
                                 onMouseOver={() => setHover(true)}
                                 onMouseLeave={() => setHover(false)}
                                 id="btn-primary"
-                                className={`cursor-pointer w-12 h-12 m-4 flex p-2 bg-[#7dde92] dark:bg-[#121212] border-2 border-solid dark:border-[#121212] border-[#7dde92] rounded-md text-[#f8ffe5] font-['Fira Sans'] no-underline group hover:shadow-xl transition-shadow screen-375:p-1`}
+                                className={`cursor-pointer w-12 h-12 m-4 flex p-2 bg-[#7dde92] dark:bg-[#121212] border-2 border-solid dark:border-[#121212] border-[#7dde92] rounded-md text-[#f6f6f6] font-['Fira Sans'] no-underline group hover:shadow-xl transition-shadow screen-375:p-1`}
                             >
                                 <img src="/Google/home_.svg" alt="home_" />
                             </div>
@@ -65,7 +66,7 @@ export default function Header() {
                                 onMouseOver={() => setInfo(true)}
                                 onMouseLeave={() => setInfo(false)}
                                 id="btn-secondary"
-                                className="cursor-pointer bg-transparent border-2 border-solid border-[#7dde92] dark:border-[#121212] rounded-md w-12 h-12 p-2 m-2 mr-8  text-[#f8ffe5] font-['Fira Sans'] no-underline hover:shadow-xl after:transition-shadow transition-colors duration-150 ease-linear hover:bg-[#7dde92] hover:dark:bg-[#121212] screen-375:p-1"
+                                className="cursor-pointer bg-transparent border-2 border-solid border-[#7dde92] dark:border-[#121212] rounded-md w-12 h-12 p-2 m-2 mr-8  text-[#f6f6f6] font-['Fira Sans'] no-underline hover:shadow-xl after:transition-shadow transition-colors duration-150 ease-linear hover:bg-[#7dde92] hover:dark:bg-[#121212] screen-375:p-1"
                             >
                                 <img src="/Google/info_.svg" alt="info_" />
                             </div>

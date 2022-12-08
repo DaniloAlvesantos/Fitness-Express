@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
 
@@ -46,13 +47,13 @@ const HomeComponents: React.FC = () => {
                                     {value.title}
                                 </h2>
                             </header>
-                            <div className="w-full flex items-center text-center justify-center flex-col relative m-8">
+                            <div className="group w-full flex items-center text-center justify-center flex-col relative m-8">
                                 <img
-                                    className="hidden  sml:block w-16 h-16 absolute left-2 top-8 bg-[#00b1a2] dark:bg-[#121212] p-2 rounded-full"
+                                    className="hidden group-hover:-translate-y-2 transition ease-out duration-200 sml:block w-16 h-16 absolute left-2 top-8 bg-[#00b1a2] dark:bg-[#121212] p-2 rounded-full"
                                     src={value.image.souce}
                                     alt="pages icon"
                                 />
-                                <a className="flex uppercase rounded-md max-w-[25rem] sml:mb-[-10rem] cursor-pointer font-Ubuntu items-center justify-center text-xs font-bold text-[#111111] dark:text-[#FDFEFF] hover:dark:text-[#121212] p-3 sml:px-9 border-2 border-solid border-[#1affd5]  min-w-[15rem] h-4 ease-in transition-all duration-300 hover:bg-[#1affd5]">
+                                <a className="flex uppercase rounded-md max-w-[25rem] sml:mb-[-10rem] cursor-pointer font-Ubuntu items-center justify-center text-xs font-bold text-[#111111] dark:text-[#FDFEFF] group-hover:dark:text-[#121212] p-3 sml:px-9 border-2 border-solid border-[#1affd5]  min-w-[15rem] h-4 ease-in transition-all duration-300 group-hover:bg-[#1affd5]">
                                     <Link href={`/${value.href}`}>
                                         {value.txt}
                                     </Link>

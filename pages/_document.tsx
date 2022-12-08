@@ -34,7 +34,7 @@ class MyDocument extends Document {
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet" />
         </Head>
-        <body className="">
+        <body className="dark:bg-[#1f1f1f]">
           <Main />
           <NextScript />
         </body>

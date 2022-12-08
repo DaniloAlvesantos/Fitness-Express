@@ -3,36 +3,49 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Cards from "./components/cardsRecipes/card";
 import Head from "next/head";
+import Image from "next/image";
 
 const Receitas: React.FC = () => {
-    const [filterElement, setFilterElement] = useState<string>();
+    const [typeFilter, setTypeFilter] = useState<string>("");
+    const [stateRadio, setStateRadio] = useState<number>(0);
 
-    function handleInput(event: {
-        target: { value: React.SetStateAction<string | undefined> };
-    }) {
-        setFilterElement(event?.target.value);
-    }
+    React.useEffect(() => {
+        console.log(typeFilter);
+    });
 
-    function filterCards() {
-        const cards = document.querySelectorAll(".cards");
-            if (filterElement != "") {
-                for (let card of cards) {
-                    let title = card.querySelector(".name");
-                    title = title.textContent.toLowerCase();
-                    let filterText = filterElement;
-                    console.log(filterText);
-                    if (!title.includes(filterText)) {
-                        card.style.display = "none";
-                    } else {
-                        card.style.display = "block";
-                    }
-                }
-            } else {
-                for (let card of cards) {
-                    card.style.display = "block";
+    function Filter() {
+        const cards: any = document.querySelectorAll(".cards");
+        if (typeFilter != "") {
+            for (let card of cards) {
+                let dificult = card.querySelector(".dificult");
+                dificult = dificult.textContent.toLowerCase();
+                console.log(dificult);
+                let typeFilterText = typeFilter?.toLowerCase();
+                if (dificult == "dificuldade:" + typeFilterText) {
+                    card.style.display = "flex";
+                    console.log(card.classList)
+                    console.log(true);
+                } else {
+                    console.log(false);
+                    card.style.display = "none";
                 }
             }
+        } else {
+            for (let card of cards) {
+                card.style.display = "flex";
+            }
+        }
     }
+
+    const handleRadio = (event: {
+        currentTarget: any;
+        preventDefault: any;
+        target: { value: React.SetStateAction<string | undefined> };
+    }) => {
+        setTypeFilter(event.target.value);
+        setStateRadio(event.currentTarget.id);
+    };
+
     return (
         <div className="dark:bg-[#1f1f1f]">
             <Head>
@@ -49,20 +62,90 @@ const Receitas: React.FC = () => {
                         Catálago de receitas
                     </h2>
                 </div>
-                <div className="w-8/12 flex justify-end items-center relative">
-                    <input
-                        id="pesquisar"
-                        className="w-7/12 px-3  py-2 border border-slate-600 rounded-xl focus:outline-0"
-                        type="text"
-                        placeholder="Pesquise por receita"
-                        onKeyDown={filterCards}
-                        onChange={handleInput}
-                    />
-                    <img
-                        src="/Google/search_.svg"
-                        className="absolute mr-2 w-10"
-                        alt="Search Icon"
-                    />
+                <div className="w-1/5 flex justify-start items-center m-4 border-solid border-2 rounded-md border-[#121212] dark:border-[#fefbff] p-4">
+                    <ul onChange={() => console.log(typeFilter)}>
+                        <li className="flex items-center justify-center bg-[#6ef195] dark:bg-[#303030] my-1 p-2 rounded-md text-[#fefbff]">
+                            <h2 className="uppercase font-mono">
+                                Procure por dificuldade de receitas
+                            </h2>
+                            <Image
+                                onClick={Filter}
+                                src="/Google/search_.svg"
+                                alt="lupa"
+                                width={60}
+                                height={60}
+                                className="hover:bg-cyan-300 rounded-md cursor-pointer p-4"
+                            />
+                        </li>
+                        <li className="bg-[#6ef195] dark:bg-[#303030] my-1 p-2 rounded-md text-[#fefbff]">
+                            <input
+                                className=""
+                                type="radio"
+                                name="todos"
+                                id="0"
+                                value=""
+                                checked={stateRadio == 0 ? true : false}
+                                onChange={handleRadio}
+                            />
+                            <label
+                                className="m-2 dark-[#fefbff] font-mono"
+                                htmlFor="todos"
+                            >
+                                Todos
+                            </label>
+                        </li>
+                        <li className="bg-[#6ef195] dark:bg-[#303030] my-1 p-2 rounded-md text-[#fefbff]">
+                            <input
+                                className=""
+                                type="radio"
+                                name="facil"
+                                value="fácil"
+                                id="1"
+                                checked={stateRadio == 1 ? true : false}
+                                onChange={handleRadio}
+                            />
+                            <label
+                                className="m-2 dark-[#fefbff] font-mono"
+                                htmlFor="facil"
+                            >
+                                Facil
+                            </label>
+                        </li>
+                        <li className="bg-[#6ef195] dark:bg-[#303030] my-1 p-2 rounded-md text-[#fefbff]">
+                            <input
+                                className=""
+                                type="radio"
+                                name="medio"
+                                value="medio"
+                                id="2"
+                                checked={stateRadio == 2 ? true : false}
+                                onChange={handleRadio}
+                            />
+                            <label
+                                className="m-2 dark-[#fefbff] font-mono"
+                                htmlFor="medio"
+                            >
+                                Medio
+                            </label>
+                        </li>
+                        <li className="bg-[#6ef195] dark:bg-[#303030] my-1 p-2 rounded-md text-[#fefbff]">
+                            <input
+                                className=""
+                                type="radio"
+                                name="dificil"
+                                value="difícil"
+                                id="3"
+                                checked={stateRadio == 3 ? true : false}
+                                onChange={handleRadio}
+                            />
+                            <label
+                                className="m-2 dark-[#fefbff] font-mono"
+                                htmlFor="dificil"
+                            >
+                                Dificil
+                            </label>
+                        </li>
+                    </ul>
                 </div>
             </main>
             <Cards />

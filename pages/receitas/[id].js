@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
@@ -67,7 +68,7 @@ function Receita({ receita }) {
 
 export async function getStaticProps({ params }) {
     const receita = await fetch(
-        `https://api-fake-fitness-express.herokuapp.com/cards/${params.id}`
+        `http://localhost:8080/cards/${params.id}`
     )
         .then((data) => {
             if (data.ok) {
@@ -86,7 +87,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     const receitas = await fetch(
-        `https://api-fake-fitness-express.herokuapp.com/cards`
+        `http://localhost:8080/cards`
     )
         .then((re) => {
             if (re.ok) {
